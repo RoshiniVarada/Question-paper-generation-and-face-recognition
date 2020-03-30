@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Required components for which route services to be activated
@@ -21,6 +21,7 @@ import { EditSectionResolver } from 'src/app/components/edit-section/edit-sectio
 import { ListDetailsComponent } from 'src/app/components/list-details/list-details.component';
 import { ErrorComponent } from 'src/app/components/error/error.component';
 import { NonuserComponent } from 'src/app/components/nonuser/nonuser.component';
+import { DisplaySectionComponent } from 'src/app/components/display-section/display-section.component';
 
 // Include route guard in routes array
 const routes: Routes = [
@@ -31,13 +32,14 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'home', component: HomeComponent },
+  { path:'display-section',component: DisplaySectionComponent},
   { path: 'error', component: ErrorComponent },
   { path: 'nonuser', component: NonuserComponent },
   { path: 'new-user', component: NewUserComponent },
   { path: 'new-section', component: NewSectionComponent },
   {path: 'list-details',component: ListDetailsComponent},
   { path: 'details/:id', component: EditUserComponent, resolve:{data : EditUserResolver} },
-  { path: 'details/:id', component: EditSectionComponent, resolve:{data : EditSectionResolver} }
+  { path: 'secdetails/:id', component: EditSectionComponent, resolve:{data : EditSectionResolver} }
 ];
 
 @NgModule({

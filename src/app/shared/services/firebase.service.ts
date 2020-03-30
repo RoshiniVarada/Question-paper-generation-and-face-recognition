@@ -17,6 +17,9 @@ export class FirebaseService {
   getUser(userKey){
     return this.db.collection('group').doc(userKey).snapshotChanges();
   }
+  getSection(secKey){
+    return this.db.collection('section').doc(secKey).snapshotChanges();
+  }
   getUserByEmail(userKey){
     return this.db.collection('group').doc(userKey).snapshotChanges();
   }
@@ -25,15 +28,23 @@ export class FirebaseService {
     value.nameToSearch = value.name.toLowerCase();
     return this.db.collection('group').doc(userKey).set(value);
   }
+  updateSectionValue(secKey, value){
+    return this.db.collection('section').doc(secKey).set(value);
+  }
 
   deleteUser(userKey){
     return this.db.collection('group').doc(userKey).delete();
+  }
+  deleteSection(Key){
+    return this.db.collection('section').doc(Key).delete();
   }
 
   getUsers(){
     return this.db.collection('group').snapshotChanges();
   }
-
+  getSections(){
+    return this.db.collection('section').snapshotChanges();
+  }
   searchUsers(searchValue){
     return this.db.collection('group',ref => ref.where('nameToSearch', '>=', searchValue)
       .where('nameToSearch', '<=', searchValue + '\uf8ff'))
@@ -60,7 +71,14 @@ export class FirebaseService {
       section:value.section,
       avatar: avatar
     });
-    
+  }
+
+
+    createSection(value){
+      return this.db.collection('section').add({
+        no: value.no,
+        sub: value.sub
+      });
     
   }
 

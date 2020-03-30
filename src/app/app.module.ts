@@ -42,6 +42,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ListDetailsComponent } from './components/list-details/list-details.component';
 import { ErrorComponent } from './components/error/error.component';
 import { NonuserComponent } from './components/nonuser/nonuser.component';
+import { DisplaySectionComponent } from './components/display-section/display-section.component';
+import { EditSectionResolver } from './components/edit-section/edit-section.resolver';
 
 const MAT_MODULES  = [
   MatButtonModule,
@@ -67,7 +69,8 @@ const MAT_MODULES  = [
     EditSectionComponent,
     ListDetailsComponent,
     ErrorComponent,
-    NonuserComponent
+    NonuserComponent,
+    DisplaySectionComponent
 
   ],
   imports: [
@@ -83,7 +86,7 @@ const MAT_MODULES  = [
   MAT_MODULES
   ],
   exports: [MAT_MODULES],
-  providers: [AuthService,EditUserResolver],
+  providers: [AuthService,EditUserResolver,EditSectionResolver],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

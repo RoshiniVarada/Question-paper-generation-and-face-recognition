@@ -10,8 +10,8 @@ export class EditSectionResolver implements Resolve<any> {
   resolve(route: ActivatedRouteSnapshot,) {
 
     return new Promise((resolve, reject) => {
-      let userId = route.paramMap.get('id');
-      this.firebaseService.getUser(userId)
+      let sectionId= route.paramMap.get('id');
+      this.firebaseService.getSection(sectionId)
         .subscribe(
           data => {
             resolve(data);

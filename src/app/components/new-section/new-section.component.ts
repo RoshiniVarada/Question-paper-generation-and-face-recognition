@@ -20,15 +20,14 @@ export class NewSectionComponent implements OnInit {
     'no': [
       { type: 'required', message: 'Number is required.' }
     ],
-    'dif': [
-      { type: 'required', message: 'Dificulty Rating is required.' }
+    'sub': [
+      { type: 'required', message: 'Subject is required.' }
     ]
 
   };
 
   constructor(
     private fb: FormBuilder,
-    public dialog: MatDialog,
     private router: Router,
     public firebaseService: FirebaseService,
     public authService: AuthService,
@@ -42,26 +41,14 @@ export class NewSectionComponent implements OnInit {
   createForm() {
     this.exampleForm = this.fb.group({
       no: ['', Validators.required ],
-      dif: ['', Validators.required ]
+      sub: ['', Validators.required ]
 
     });
   }
 
-  openDialog() {
-    const dialogRef = this.dialog.open(AvatarDialogComponent, {
-      height: '400px',
-      width: '400px',
-    });
 
-    dialogRef.afterClosed().subscribe(result => {
-      if(result){
-        this.avatarLink = result.link;
-      }
-    });
-  }
 
   resetFields(){
-    this.avatarLink = "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg";
     this.exampleForm = this.fb.group({
       no: new FormControl('', Validators.required),
       dif: new FormControl('', Validators.required),
@@ -69,11 +56,11 @@ export class NewSectionComponent implements OnInit {
   }
 
   onSubmit(value){
-    this.firebaseService.createUser(value, this.avatarLink)
+    this.firebaseService.createSection(value)
       .then(
         res => {
           this.resetFields();
-          this.router.navigate(['/home']);
+          this.router.navigate(['/display-section']);
         }
       )
   }

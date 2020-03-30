@@ -70,10 +70,10 @@
 
                   <div class="form-group">
                     <mat-form-field class="input-style">
-                      <input matInput placeholder="Difficulty Rating" class="form-control" formControlName="dif">
+                      <input matInput placeholder="Subject For Exam" class="form-control" formControlName="sub">
                     </mat-form-field>
-                    <ng-container *ngFor="let validation of validation_messages.dif">
-                      <mat-error *ngIf="exampleForm.get('dif').hasError(validation.type) && (exampleForm.get('dif').dirty || exampleForm.get('dif').touched)">{{validation.message}}</mat-error>
+                    <ng-container *ngFor="let validation of validation_messages.sub">
+                      <mat-error *ngIf="exampleForm.get('sub').hasError(validation.type) && (exampleForm.get('sub').dirty || exampleForm.get('sub').touched)">{{validation.message}}</mat-error>
                     </ng-container>
                   </div>
 

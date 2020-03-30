@@ -21,8 +21,8 @@ export class EditSectionComponent implements OnInit {
     'no': [
       { type: 'required', message: 'Number is required.' }
     ],
-    'dif': [
-      { type: 'required', message: 'Surname is required.' }
+    'sub': [
+      { type: 'required', message: 'Subject is required.' }
     ]
   };
 
@@ -50,40 +50,27 @@ export class EditSectionComponent implements OnInit {
   createForm() {
     this.exampleForm = this.fb.group({
       no: [this.item.no, Validators.required],
-      dif: [this.item.dif, Validators.required],
+      sub: [this.item.sub, Validators.required],
 
     });
   }
 
-  openDialog() {
-    const dialogRef = this.dialog.open(AvatarDialogComponent, {
-      height: '400px',
-      width: '400px'
-    });
 
-    dialogRef.afterClosed().subscribe(result => {
-      if(result){
-        this.item.avatar = result.link;
-      }
-    });
-  }
 
   onSubmit(value){
-    value.avatar = this.item.avatar;
-    value.age = Number(value.age);
-    this.firebaseService.updateUser(this.item.id, value)
+    this.firebaseService.updateSectionValue(this.item.id, value)
       .then(
         res => {
-          this.router.navigate(['/home']);
+          this.router.navigate(['/display-section']);
         }
       )
   }
 
   delete(){
-    this.firebaseService.deleteUser(this.item.id)
+    this.firebaseService.deleteSection(this.item.id)
       .then(
         res => {
-          this.router.navigate(['/home']);
+          this.router.navigate(['/display-section']);
         },
         err => {
           console.log(err);
