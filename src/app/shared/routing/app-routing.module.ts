@@ -22,6 +22,7 @@ import { ListDetailsComponent } from 'src/app/components/list-details/list-detai
 import { ErrorComponent } from 'src/app/components/error/error.component';
 import { NonuserComponent } from 'src/app/components/nonuser/nonuser.component';
 import { DisplaySectionComponent } from 'src/app/components/display-section/display-section.component';
+import { StudentDashboardComponent } from 'src/app/components/student-dashboard/student-dashboard.component';
 
 // Include route guard in routes array
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'sign-in', component: SignInComponent, canActivate: [SecureInnerPagesGuard]},
   { path: 'register-user', component: SignUpComponent, canActivate: [SecureInnerPagesGuard]},
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  {path:'stu-dashboard',component:StudentDashboardComponent,canActivate: [AuthGuard]},
   { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'home', component: HomeComponent },

@@ -61,7 +61,7 @@
 
                   <div class="form-group">
                     <mat-form-field class="input-style">
-                      <input matInput type="number" min="1" max="5" placeholder="Number" class="form-control" formControlName="no">
+                      <input matInput type="number" min="1" max="2" placeholder="Number" class="form-control" formControlName="no">
                     </mat-form-field>
                     <ng-container *ngFor="let validation of validation_messages.no">
                       <mat-error *ngIf="exampleForm.get('no').hasError(validation.type) && (exampleForm.get('no').dirty || exampleForm.get('no').touched)">{{validation.message}}</mat-error>
@@ -77,6 +77,8 @@
                     </ng-container>
                   </div>
 
+
+                  
 
 
 

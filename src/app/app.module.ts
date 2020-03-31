@@ -5,7 +5,7 @@ import { ReactiveFormsModule,FormsModule } from "@angular/forms";
 import { DragDropModule } from "@angular/cdk/drag-drop";
 // App routing modules
 import { AppRoutingModule } from './shared/routing/app-routing.module';
-
+import { QuizComponent } from './components/quiz/quiz.component';
 // App components
 import { AppComponent } from './app.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
@@ -23,7 +23,7 @@ import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
-
+import { HttpClientModule } from '@angular/common/http';
 // Auth service
 import { AuthService } from "./shared/services/auth.service";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -44,6 +44,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { NonuserComponent } from './components/nonuser/nonuser.component';
 import { DisplaySectionComponent } from './components/display-section/display-section.component';
 import { EditSectionResolver } from './components/edit-section/edit-section.resolver';
+import { StudentDashboardComponent } from './components/student-dashboard/student-dashboard.component';
 
 const MAT_MODULES  = [
   MatButtonModule,
@@ -59,6 +60,8 @@ const MAT_MODULES  = [
     AppComponent,
     SignInComponent,
     SignUpComponent,
+      QuizComponent,
+
     DashboardComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
@@ -70,7 +73,8 @@ const MAT_MODULES  = [
     ListDetailsComponent,
     ErrorComponent,
     NonuserComponent,
-    DisplaySectionComponent
+    DisplaySectionComponent,
+    StudentDashboardComponent
 
   ],
   imports: [
@@ -83,6 +87,7 @@ const MAT_MODULES  = [
     BrowserAnimationsModule,
     FormsModule,
     DragDropModule,
+        HttpClientModule,
   MAT_MODULES
   ],
   exports: [MAT_MODULES],
