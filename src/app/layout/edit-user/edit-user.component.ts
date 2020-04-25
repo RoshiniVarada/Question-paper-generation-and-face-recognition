@@ -128,7 +128,6 @@ export class EditUserComponent implements OnInit {
   }
 
   emailclick(email){
-    email="sarikareddy520@gmail.com";
     window.open("https://mail.google.com/mail/u/0/?view=cm&fs=1&to="+email+"&su=SUBJECT&body=BODY&tf=1")
   }
 
