@@ -29,12 +29,12 @@
     "In queue" : "در صف",
     "Mail" : "ایمیل",
     "View All" : "نمایش همه",
-    "More Themes" : "More Themes",
-    "Collapse Sidebar" : "Collapse Sidebar",
-    "Full Name": "Full Name",
-    "Email": "Email",
-    "Password": "Password",
-    "Repeat Password": "Repeat Password",
-    "Register": "Register",
-    "Log in": "Log in"
+    "More Themes" : "مضامین بیشتر",
+    "Collapse" : "سقوط - فروپاشی",
+    "Full Name": "نام و نام خانوادگی",
+    "Email": "پست الکترونیک",
+    "Password": "کلمه عبور",
+    "Repeat Password": "تکرار رمز عبور",
+    "Register": "ثبت نام",
+    "Log in": "وارد شدن"
 }
