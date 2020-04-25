@@ -5,7 +5,7 @@
         <div class="col-md-4">
           <div class="card card-user">
             <div class="image">
-              <img src="../../../assets/images/damir-bosnjak.jpg" alt="...">
+              <img src="https://www.lifeinvestasset.com/wp-content/uploads/2018/11/damir-bosnjak-226653-unsplash.jpg" alt="...">
             </div>
             <div class="card-body">
               <div class="author">
@@ -19,63 +19,31 @@
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card" *ngIf="authService.userData as user">
             <div class="card-header">
               <h4 class="card-title">Section Members</h4>
             </div>
             <div class="card-body">
               <ul class="list-unstyled team-members">
-                <li>
-                  <div class="row">
+
+                <li *ngFor="let item of section">
+                  <div class="row"  *ngIf="item.payload.doc.data().email!=user.email">
                     <div class="col-md-2 col-2">
                       <div class="avatar">
-                        <img src="../../../assets/images/faces/ayo-ogunseinde-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                        <img [src]="item.payload.doc.data().avatar" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                       </div>
                     </div>
-                    <div class="col-md-7 col-7">
-                      DJ Khaled
+                    <div class="col-md-7 col-7"  *ngIf="item.payload.doc.data().email!=user.email">
+                     {{item.payload.doc.data().Username}}
                       <br />
-                      <span class="text-muted"><small>Offline</small></span>
+                      <span class="text-muted"><small> {{item.payload.doc.data().email}}</small></span>
                     </div>
-                    <div class="col-md-3 col-3 text-right">
-                      <button ><i class="fa fa-envelope"></i></button>
+                    <div class="col-md-3 col-3 text-right"  *ngIf="item.payload.doc.data().email!=user.email">
+                      <button (click)="emailclick(item.payload.doc.data().email)" ><i class="fa fa-envelope"></i></button>
                     </div>
                   </div>
                 </li>
-                <li>
-                  <div class="row">
-                    <div class="col-md-2 col-2">
-                      <div class="avatar">
-                        <img src="../../../assets/images/faces/joe-gardner-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                      </div>
-                    </div>
-                    <div class="col-md-7 col-7">
-                      Creative Tim
-                      <br />
-                      <span class="text-success"><small>Available</small></span>
-                    </div>
-                    <div class="col-md-3 col-3 text-right">
-                      <button><i class="fa fa-envelope"></i></button>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="col-md-2 col-2">
-                      <div class="avatar">
-                        <img src="../../../assets/images/faces/clem-onojeghuo-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                      </div>
-                    </div>
-                    <div class="col-ms-7 col-7">
-                      Flume
-                      <br />
-                      <span class="text-danger"><small>Busy</small></span>
-                    </div>
-                    <div class="col-md-3 col-3 text-right">
-                      <button><i class="fa fa-envelope"></i></button>
-                    </div>
-                  </div>
-                </li>
+
               </ul>
             </div>
           </div>
@@ -94,7 +62,7 @@
                       <input type="text" class="form-control" disabled="" placeholder="Company" formControlName="Company">
                     </div>
                   </div>
-                  <div class="col-md-3 col-3 px-1">
+                  <div class="col-md-3 col-6 px-1">
                     <div class="form-group" >
                       <label>Username</label>
                       <input type="text" class="form-control" placeholder="Username" formControlName="Username">

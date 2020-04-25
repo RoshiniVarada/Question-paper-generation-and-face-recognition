@@ -7,6 +7,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class FirebaseService {
   users: any;
   sectionsCollection: any;
+  profileuser: any;
 
   constructor(public db: AngularFirestore) {}
 
@@ -26,6 +27,8 @@ export class FirebaseService {
 
   updateUser(userKey, value){
     value.nameToSearch = value.Username.toLowerCase();
+    this.profileuser=JSON.parse(localStorage.getItem("user"));
+    value.avatar=this.profileuser.photoURL;
     return this.db.collection('group').doc(userKey).set(value);
   }
   updateSectionValue(secKey, value){
@@ -56,11 +59,12 @@ export class FirebaseService {
   }
 
   searchUsersSection(value){
-    return this.db.collection('/group', ref => ref.where('section', '==', value)).snapshotChanges();
+    return this.db.collection('/group', ref => ref.where('Section', '==', value)).snapshotChanges();
     
   }
 
   createUser(value, avatar){
+    this.profileuser=JSON.parse(localStorage.getItem("user"));
     return this.db.collection('group').add({
       name: value.name,
       nameToSearch: value.name.toLowerCase(),
@@ -73,7 +77,8 @@ export class FirebaseService {
       PostalCode:value.PostalCode,
       Role:value.Role,
       Section:value.Section,
-      Company:value.Company
+      Company:value.Company,
+      avatar:this.profileuser.photoURL
     });
   }
 

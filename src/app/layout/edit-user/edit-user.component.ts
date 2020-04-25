@@ -51,6 +51,8 @@ export class EditUserComponent implements OnInit {
      {type: 'required',message:'Company is required'}
    ]
  };
+  section: any;
+  profileuser: any;
 
   constructor(
     public firebaseService: FirebaseService,
@@ -68,11 +70,18 @@ export class EditUserComponent implements OnInit {
       if (data) {
         this.item = data.payload.doc.data();
         this.item.id = data.payload.doc.id;
+        localStorage.setItem("UserDetails",JSON.stringify(this.item));
+        this.sectionDisplay();
         this.createForm();
       }
     })
   }
-
+  sectionDisplay(){
+    this.firebaseService.searchUsersSection(this.item.Section)
+    .subscribe(result => {
+      this.section = result;
+    })
+  }
   createForm() {
     this.exampleForm = this.fb.group({
       Username: [this.item.Username, Validators.required ],
@@ -116,6 +125,11 @@ export class EditUserComponent implements OnInit {
 
   cancel(){
     this.router.navigate(['/layout']);
+  }
+
+  emailclick(email){
+    email="sarikareddy520@gmail.com";
+    window.open("https://mail.google.com/mail/u/0/?view=cm&fs=1&to="+email+"&su=SUBJECT&body=BODY&tf=1")
   }
 
 }
