@@ -78,8 +78,8 @@
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 *ngIf="marksCalculation()>75" class="modal-title">Well done!</h4>
-          <h4 *ngIf="marksCalculation()<75 && marksCalculation()>50" class="modal-title">Need to improve</h4>
-          <h4 *ngIf="marksCalculation()<50" class="modal-title">Poor perforamance</h4>
+          <h4 *ngIf="marksCalculation()<=75 && marksCalculation()>50" class="modal-title">Need to improve</h4>
+          <h4 *ngIf="marksCalculation()<=50" class="modal-title">Poor perforamance</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         

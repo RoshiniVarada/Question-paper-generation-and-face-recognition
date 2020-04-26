@@ -1,6 +1,6 @@
 {
   "name": "helloworld",
-  "displayName": "HelloCordova",
+  "displayName": "Academia",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "scripts": {
@@ -56,6 +56,8 @@
     "perfect-scrollbar": "1.5.0",
     "popper.js": "^1.16.1",
     "rxjs": "^6.5.5",
+    "socket.io": "~2.2.0",
+    "socket.io-client": "~2.2.0",
     "tslib": "^1.10.0",
     "typescript": "^3.7.5",
     "yarn": "1.22.0",
