@@ -21,7 +21,7 @@ const routes: Routes = [
            { path: 'layout/new-section', loadChildren: () => import('./new-section/new-section.module').then(m => m.NewSectionModule) },
            { path: 'layout/display-section', loadChildren: () => import('./display-section/display-section.module').then(m =>m.DisplaySectionModule) },
            { path: 'layout/list-details', loadChildren: () => import('./list-details/list-details.module').then(m => m.ListDetailsModule) },
-             { path: 'layout/user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) }
+          
         ]
     }
 ];

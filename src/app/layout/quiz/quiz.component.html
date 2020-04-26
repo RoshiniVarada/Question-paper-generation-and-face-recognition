@@ -58,14 +58,51 @@
         <div class="p-1 m-2 alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is {{isCorrect(question)}}.</div>
       </div>
     </div>
+    <button class="btn btn-warning col-3" data-toggle="modal" data-target="#myModal">Marks</button><div class="col"></div>
   </div>
   <hr />
+
+
+
   <div *ngIf="mode!='result'" class="row">
     <button class="btn btn-warning col-3" (click)="mode = 'quiz'">Quiz</button><div class="col"></div>
     <button class="btn btn-info col-3" (click)="mode = 'review'">Review</button><div class="col"></div>
-    <button class="btn btn-primary col-3" (click)="onSubmit();">Submit Quiz</button><div class="col"></div>
+    <button class="btn btn-primary col-4" (click)="onSubmit();">Submit Quiz</button><div class="col"></div>
   </div>
+
+
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 *ngIf="marksCalculation()>75" class="modal-title">Well done!</h4>
+          <h4 *ngIf="marksCalculation()<75 && marksCalculation()>50" class="modal-title">Need to improve</h4>
+          <h4 *ngIf="marksCalculation()<50" class="modal-title">Poor perforamance</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body progress_value">
+          <app-progress [value]=marksCalculation()></app-progress>
+      
+            
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
 </div>
+
 
 
 

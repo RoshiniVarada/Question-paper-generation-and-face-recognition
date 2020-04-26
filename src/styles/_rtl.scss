@@ -52,11 +52,21 @@
     .input-group {
         direction: ltr;
     }
+    .fa-5x{
+        float:right;
+    }
+    .text-right {
+        /* text-align: right !important; */
+        text-align: left!important;
+    }
 }
 @media screen and (max-width: 992px) {
     .rtl {
         .navbar-brand {
             direction: ltr;
+        }
+        .fa-5x{
+            float:right;
         }
         .sidebar {
             right: -235px !important;
@@ -69,6 +79,10 @@
                 left: auto !important;
                 right: 0 !important;
             }
+        }
+        .text-right {
+            /* text-align: right !important; */
+            text-align: left!important;
         }
     }
 }

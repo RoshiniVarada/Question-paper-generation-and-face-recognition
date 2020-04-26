@@ -12,6 +12,7 @@ import { Option, Question, Quiz, QuizConfig } from '../../models/index';
 })
 export class QuizComponent implements OnInit {
   quizes: any[];
+  showModal='false';
   quiz: Quiz = new Quiz(null);
   mode = 'quiz';
   quizName: string;
@@ -42,6 +43,10 @@ export class QuizComponent implements OnInit {
   duration = '';
   quizmarks: number;
   marks=0;
+  finalmarks=0;
+  totalmarks=10;
+  doughnutChartType = 'doughnut';
+  percent: number;
 
   constructor(private quizService: QuizService) { }
 
@@ -112,17 +117,34 @@ export class QuizComponent implements OnInit {
     }else{
       question.type=false;
     }
-    let answers = [];
-    this.quiz.questions.every(x => answers.push({ 'quizId': this.quiz.id, 'questionId': x.id, 'answered':  question.type }));
-    console.log(answers);
+
+ 
     return question.options.every(x => x.selected === x.isAnswer) ? 'correct' : 'wrong';
+    
+   
   };
 
   onSubmit() {
 
     this.mode = 'result';
-   
-      
-  
+
+
+  }
+
+  marksCalculation(){
+    this.marks=0;
+   for(var i=0;i<this.quiz.questions.length;i++){
+      if(this.isCorrect(this.quiz.questions[i])=="correct"){
+        this.marks++;
+        
+        
+      }
+      if(this.quiz.questions.length==i+1){
+        this.finalmarks=this.marks;
+        this.percent=(this.finalmarks/this.totalmarks) *100;
+
+      }
+   }
+   return  this.percent;
   }
 }

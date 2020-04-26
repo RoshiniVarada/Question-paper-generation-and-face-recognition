@@ -29,12 +29,15 @@
     "In queue" : "قطار میں",
     "Mail" : "میل",
     "View All" : "سب دیکھیں",
-    "More Themes" : "More Themes",
-    "Collapse Sidebar" : "Collapse Sidebar",
-    "Full Name": "Full Name",
-    "Email": "Email",
-    "Password": "Password",
-    "Repeat Password": "Repeat Password",
-    "Register": "Register",
-    "Log in": "Log in"
+    "More Themes" : "مزید تھیمز",
+    "Collapse" : "گرنے",
+    "Full Name": "پورا نام",
+    "Email": "ای میل",
+    "Password": "پاس ورڈ",
+    "Repeat Password": "پاس ورڈ دہراؤ",
+    "Register": "رجسٹر کریں",
+    "Log in": "لاگ ان کریں",
+    "Assignments":"اسائنمنٹس",
+    "Grades":"گریڈ",
+    "People":"لوگ"
 }

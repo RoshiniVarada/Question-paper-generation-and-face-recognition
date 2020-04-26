@@ -36,5 +36,8 @@
     "Password": "Password",
     "Repeat Password": "Ripetere la password",
     "Register": "Registrarsi",
-    "Log in": "Entrare"
+    "Log in": "Entrare",
+    "Assignments":"Compiti",
+    "Grades":"gradi",
+    "People":"Persone"
 }

@@ -8,7 +8,7 @@ import { StudentDashboardComponent } from './student-dashboard.component';
 import { QuizComponent } from '../quiz/quiz.component';
 //import { MaterialModule } from '../shared/material/material.module';
 
-
+import{ProgressComponent} from '../progress/progress.component'
 import { StatModule } from '../../shared/modules';
 
 @NgModule({
@@ -23,7 +23,8 @@ import { StatModule } from '../../shared/modules';
     ],
     declarations: [
         StudentDashboardComponent,
-        QuizComponent
+        QuizComponent,
+        ProgressComponent
     ]
 })
 export class StudentDashboardModule {}

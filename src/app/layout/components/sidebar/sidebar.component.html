@@ -13,15 +13,15 @@
             <span>{{ 'Grades' | translate }}</span>
         </a>
         <a [routerLink]="['layout/tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-table"></i>&nbsp;
+            <i class="fa fa-fw fa-users"></i>&nbsp;
             <span>{{ 'People' | translate }}</span>
         </a>
         <a [routerLink]="['layout/edit-user']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-edit"></i>&nbsp;
+            <i class="fa fa-fw fa-user"></i>&nbsp;
             <span>{{ 'Profile' | translate }}</span>
         </a>
         <a class="list-group-item" (click)="authService.SignOut()">
-            <i class="fa fa-fw fa-user"></i>&nbsp;
+            <i class="fa fa-fw fa-sign-out"></i>&nbsp;
             <span>{{ 'Log Out' | translate  }}</span>
         </a>
      

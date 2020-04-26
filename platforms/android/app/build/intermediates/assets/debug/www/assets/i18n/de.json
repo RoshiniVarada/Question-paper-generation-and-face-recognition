@@ -29,12 +29,15 @@
     "In queue" : "In der Warteschlange",
     "Mail" : "Post",
     "View All" : "Alle Anzeigen",
-    "More Themes" : "More Themes",
-    "Collapse Sidebar" : "Collapse Sidebar",
-    "Full Name": "Full Name",
+    "More Themes" : "Weitere Themen",
+    "Collapse" : "Collapse",
+    "Full Name": "Vollständiger Name",
     "Email": "Email",
-    "Password": "Password",
-    "Repeat Password": "Repeat Password",
-    "Register": "Register",
-    "Log in": "Log in"
+    "Password": "Passwort",
+    "Repeat Password": "Passwort wiederholen",
+    "Register": "Registrieren",
+    "Log in": "Anmeldung",
+    "Assignments":"Zuordnungen",
+    "Grades":"Noten",
+    "People":"Menschen"
 }

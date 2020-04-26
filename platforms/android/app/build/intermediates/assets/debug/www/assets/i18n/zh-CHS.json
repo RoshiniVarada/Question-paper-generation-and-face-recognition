@@ -29,12 +29,15 @@
     "In queue" : "队列中",
     "Mail" : "邮件",
     "View All" : "查看所有",
-    "More Themes" : "More Themes",
-    "Collapse Sidebar" : "Collapse Sidebar",
-    "Full Name": "Full Name",
-    "Email": "Email",
-    "Password": "Password",
-    "Repeat Password": "Repeat Password",
-    "Register": "Register",
-    "Log in": "Log in"
+    "More Themes" : "更多主题",
+    "Collapse" : "坍方",
+    "Full Name": "全名",
+    "Email": "电子邮件",
+    "Password": "密码",
+    "Repeat Password": "重复输入密码",
+    "Register": "寄存器",
+    "Log in": "登录",
+    "Assignments":"作业",
+    "Grades":"年级",
+    "People":"人"
 }
