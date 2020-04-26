@@ -83,12 +83,13 @@ def retrieve_by_name_db(name):
                     "questionType": {
                         "id": 1,
                         "name": "Multiple Choice",
-                        "isActive": "true"
+                        "isActive": "true",
                     }
                 })
             except:
                 pass
-    return str(answer_dict)
+            count = count + 1
+    return str(json.dumps(answer_dict))
 
 
 if __name__ == "__main__":
