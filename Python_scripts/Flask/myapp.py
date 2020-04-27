@@ -2,6 +2,7 @@ from pymongo import MongoClient
 from flask import Flask
 import json
 from random import randrange
+import random
 
 app = Flask(__name__)
 
@@ -24,18 +25,6 @@ def hello():
     return json.dumps(str(result), indent=4)
 
 
-@app.route("/angular", methods=['GET'])
-def retrieve():
-    db_connection = Connect()
-    records = db_connection.quiz_questions
-    result = []
-    for document in records.find():
-        if document['name'] == "Angular JS":
-            document['_id'] = str(document['_id'])
-            result.append(document)
-    return json.dumps(result, indent=4)
-
-
 @app.route("/add/<name>", methods=['GET'])
 def retrieve_by_name_db(name):
     db_connection = Connect()
@@ -46,8 +35,7 @@ def retrieve_by_name_db(name):
         "questions": []
     }
     count = 0
-    for i in db_connection.interview.find():
-        if i['Subject'] == name:
+    for i in db_connection.interview.aggregate([{'$match': {'Subject':name}},{'$sample': {'size': 10}}]):
             try:
                 answer_dict['questions'].append({
                     "id": count,
