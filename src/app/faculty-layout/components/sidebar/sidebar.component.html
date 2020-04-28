@@ -4,9 +4,9 @@
             <i class="fa fa-fw fa-dashboard"></i>&nbsp;
             <span>{{ 'Dashboard' | translate }}</span>
         </a>
-        <a class="list-group-item" (click)="createAlert()" routerLink="layout/dashboard">
-            <i class="fa fa-fw fa-edit"></i>&nbsp;
-            <span>{{ 'New Announcement' | translate }}</span>
+        <a [routerLink]="['layout/new-user']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-user-plus"></i>&nbsp;
+            <span>{{ 'Add Student' | translate }}</span>
         </a>
         <a [routerLink]="['layout/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
@@ -16,15 +16,15 @@
             <i class="fa fa-fw fa-users"></i>&nbsp;
             <span>{{ 'People' | translate }}</span>
         </a>
-        <a [routerLink]="['layout/new-user']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-user-plus"></i>&nbsp;
-            <span>{{ 'Add Student' | translate }}</span>
+        <a class="list-group-item" (click)="createAlert()" routerLink="layout/dashboard">
+            <i class="fa fa-fw fa-edit"></i>&nbsp;
+            <span>{{ 'New Announcement' | translate }}</span>
         </a>
         <a [routerLink]="['layout/edit-user']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-user-circle-o"></i>&nbsp;
             <span>{{ 'Edit Profile' | translate }}</span>
         </a>
-        <a [routerLink]="['layout/create-assignment']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+        <a [routerLink]="['layout/new-section']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-sticky-note"></i>&nbsp;
             <span>{{ 'Create Assignment' | translate }}</span>
         </a>

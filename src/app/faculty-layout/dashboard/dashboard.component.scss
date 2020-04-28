@@ -31,11 +31,19 @@
 }
 
 .class_remove{
-    right: 2.5vw;
+    right: -6.5vw;
 }
 .class_edit{
-    right: 5vw;
-    padding: 0.9rem 1.25rem;
+    right: 7vw;
+    top: 0.2vw;
 }
+@media screen and (min-width: 460px) {
+    .class_remove{
+        right: 2.5vw;
+    }
+    .class_edit{
+        right: 5vw;
+    padding: 0.75rem 1.25rem;
+    }
 
-
+}

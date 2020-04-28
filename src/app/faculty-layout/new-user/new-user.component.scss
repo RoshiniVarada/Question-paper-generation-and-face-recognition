@@ -4154,3 +4154,10 @@ margin-top:-70px;
 .delete_icon_color{
   color: #F44336
 }
+
+@media screen and (min-width: 460px) {
+  .overflow_class{
+    overflow: hidden;
+  }
+
+}
