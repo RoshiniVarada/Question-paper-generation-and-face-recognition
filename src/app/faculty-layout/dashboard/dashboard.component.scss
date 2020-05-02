@@ -2398,7 +2398,7 @@ Copyright (c) 2015 Daniel Eden
       outline: 0; }
       .alert .close i.fa,
       .alert .close i.nc-icon {
-        font-size: 14px !important; }
+        font-size: 21px !important; }
       .alert .close:hover, .alert .close:focus {
         opacity: 1; }
     .alert span[data-notify="icon"] {
@@ -2410,7 +2410,7 @@ Copyright (c) 2015 Daniel Eden
       margin-top: -11px; }
     .alert button.close {
       position: absolute;
-      right: 10px;
+    
       top: 50%;
       margin-top: -13px;
       width: 25px;
@@ -4247,23 +4247,7 @@ Copyright (c) 2015 Daniel Eden
     width: 52vw;
 }
 
-.class_remove{
-    right: -6.5vw;
-}
-.class_edit{
-    right: 7vw;
-    top: 0.2vw;
-}
-@media screen and (min-width: 460px) {
-    .class_remove{
-        right: 2.5vw;
-    }
-    .class_edit{
-        right: 5vw;
-    padding: 0.75rem 1.25rem;
-    }
 
-}
 
 .alert-dismissible .close {
     position: absolute;
@@ -4305,4 +4289,21 @@ button.close {
     padding-top: 0.45rem;
 }
 
-  
+
+.alert .classremove {
+  right: 5.5vw;
+}
+  .alert .classedit {
+    right: 11vw;
+    top: 0.2vw;
+  }
+@media screen and (min-width: 460px) {
+  .alert .classremove {
+    right: 2.5vw;
+  }
+  .alert .classedit {
+    right: 5vw;
+  padding: 0.75rem 1.25rem;
+  }
+ 
+}
