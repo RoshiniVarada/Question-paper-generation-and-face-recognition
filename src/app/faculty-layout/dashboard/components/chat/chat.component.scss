@@ -22,6 +22,7 @@ body {
   min-height: 300px;
   max-height: 720px;
   background: #E6EAEA;
+  
 }
 @media screen and (max-width: 360px) {
   #frame {
@@ -177,13 +178,13 @@ body {
   float: left;
   margin: 15px 15px 5px 15px;
   width: calc(100% - 25px);
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 #frame .content .messages ul li:nth-last-child(1) {
   
 }
 #frame .content .messages ul li.sent img {
-  margin: 6px 8px 0 0;
+  margin: 2.5px 8px 0 0;
 }
 #frame .content .messages ul li.sent p {
   background: #435f7a;
@@ -198,9 +199,9 @@ body {
   float: right;
 }
 #frame .content .messages ul li img {
-  width: 22px;
-  border-radius: 50%;
   float: left;
+  width: 34px;
+  border-radius: 19px;
 }
 #frame .content .messages ul li p {
   display: inline-block;

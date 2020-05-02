@@ -4234,9 +4234,11 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .alert.alert-info {
-    color: #856404;
-    background-color: #fff3cd;
-    border-color: #ffeeba;
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  border-radius: 18px;
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
 }
 
 .add_alert{

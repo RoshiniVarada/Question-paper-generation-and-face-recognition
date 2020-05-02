@@ -621,6 +621,7 @@
    * PANELS
    ********************/
   .panel {
+    
  }
     .panel .panel-heading,
     .panel .panel-body,
@@ -645,7 +646,8 @@
           font-size: 14px; }
     .panel .panel-body {
       padding-top: 10px;
-      padding-bottom: 15px; }
+      padding-bottom: 15px;
+      background: #E6EAEA; }
     .panel .panel-note {
       font-size: 13px;
       line-height: 2.6;
@@ -667,8 +669,23 @@
         margin-bottom: 0;
         font-size: 14px;
         color: #8D99A8; }
+        .panel.panel-scrolling{
+          background: #E6EAEA;
+        }
     .panel.panel-scrolling .btn-bottom {
-      margin-bottom: 30px; }
+      background: #3F5680;
+      margin-left: 20vw;
+      color: white;
+      /* float: right; */
+      border-radius: 16px;
+      box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+      /* background-color: #FFFFFF; */
+      /* color: #252422; */
+      /* margin-bottom: 20px; */
+      /* position: relative; */
+      /* border: 0 none; */
+      transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+    }
     .panel .table > thead > tr > td:first-child,
     .panel .table > thead > tr > th:first-child,
     .panel .table > tbody > tr > td:first-child,
@@ -734,9 +751,11 @@
   ul.activity-list > li {
     padding: 25px 0; }
     ul.activity-list > li:not(:last-child) {
-      border-bottom: 1px solid #F0F0F0; }
+      border-bottom: 2px solid #F0F0F0; }
     ul.activity-list > li .avatar {
-      width: 40px; }
+      width: 40px;
+      border-radius: 19px;
+     }
     ul.activity-list > li > p {
       margin-bottom: 0;
       padding-left: 3.5em; }
@@ -1769,7 +1788,6 @@
     box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
     /* background-color: #FFFFFF; */
     /* color: #252422; */
-    margin-bottom: 20px;
     position: relative;
     border: 0 none;
     transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
@@ -1779,4 +1797,8 @@
     float: right;
     padding-right: 3.5rem;
     padding-top: 0.45rem;
+}
+.ref_class{
+  color:black;
+  font-weight:bold;
 }
