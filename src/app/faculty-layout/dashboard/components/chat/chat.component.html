@@ -11,7 +11,7 @@
 				<li class=" {{ userData.displayName === message.from.name? 'sent': 'replies' }}">
 
 					<img class="image_chat" *ngIf="message.action === undefined"  [src]="message.from.avatar" alt="User Avatar">
-                    <p>{{message.content}}</p>
+                    <p>{{message.content}} <span class=" {{ userData.displayName === message.from.name? 'senttime': 'repliestime' }}">{{message.timeFormat}}</span></p>
                     
                 </li>
             </div>

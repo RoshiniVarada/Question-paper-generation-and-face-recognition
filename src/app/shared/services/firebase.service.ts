@@ -134,8 +134,8 @@ export class FirebaseService {
   }
   createLearnings(value){
     return this.db.collection('learnings').add({
-      url: value.url,
-      title: value.title
+      URL: value.URL,
+      Title: value.Title
     })
 
   

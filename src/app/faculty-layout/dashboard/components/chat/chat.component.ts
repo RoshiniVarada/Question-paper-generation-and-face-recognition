@@ -47,7 +47,7 @@ export class ChatComponent implements OnInit {
     .subscribe(messagehistory => {
       this.setMsgHistory=localStorage.getItem("setMsgHistory");
       if(this.setMsgHistory!=="true"){
-        if(messagehistory.length<=5){
+        if(messagehistory.length<=100){
           messagehistory.forEach((x) => {this.messagehistory.push(x.payload.doc.data()) });
           localStorage.setItem("setMsgHistory","true");
           this.messages=this.messagehistory;
