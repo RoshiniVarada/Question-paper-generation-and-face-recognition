@@ -131,6 +131,7 @@
     margin-top: 0;
     color: inherit;
     font-weight: bold;
+    font-size: 13.5px;
 }
 
 .timeline-body > p,
@@ -170,5 +171,10 @@
         left: -14px;
         border-right-width: 14px;
         border-left-width: 0;
+    }
+    .img_header {
+        float: right;
+        padding-right: 3.5rem;
+        padding-top: 0.45rem;
     }
 }

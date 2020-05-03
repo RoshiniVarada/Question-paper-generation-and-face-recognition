@@ -1,83 +1,30 @@
+<div class="contact-profile">
+                 
+    <i class="fa fa-plus fa-fw img_header_plus" aria-hidden="true"></i>
+    <i class="fa fa-clock fa-fw img_header_plus" aria-hidden="true"></i>
+    <p>Active Learning</p>
+  </div>
 <div class="card-body">
     <ul class="timeline">
 
-        <li class="timeline-inverted">
+        <li class="timeline-inverted" *ngFor="activity of activities">
 
             <div class="timeline-panel">
                 <div class="timeline-heading">
-                    <h4 class="timeline-title">Simple Application using Android Studio</h4>
+                    <h4 class="timeline-title">{{activity.payload.doc.data().title}}
+                          <i class="fa fa-edit"></i>
+                          <i class="fa fa-remove"></i>
+                  </h4>                 
                 </div>
                 <div class="timeline-body">
                     <iframe style="width:100%; height:100%" 
-                    src="https://www.youtube.com/embed/-F8LepUlKFQ" allowfullscreen> 
+                     src="{{activity.payload.doc.data().url}}">
+                    allowfullscreen> 
                     </iframe>
                 </div>
             </div>
         </li>
     </ul>
-    <ul class="timeline">
 
-        <li class="timeline-inverted">
-
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <h4 class="timeline-title">Simple Application using Android Studio</h4>
-                </div>
-                <div class="timeline-body">
-                    <iframe style="width:100%; height:100%" 
-                    src="https://www.youtube.com/embed/-F8LepUlKFQ" allowfullscreen> 
-                    </iframe>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <ul class="timeline">
-
-        <li class="timeline-inverted">
-
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <h4 class="timeline-title">Simple Application using Android Studio</h4>
-                </div>
-                <div class="timeline-body">
-                    <iframe style="width:100%; height:100%" 
-                    src="https://www.youtube.com/embed/-F8LepUlKFQ" allowfullscreen> 
-                    </iframe>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <ul class="timeline">
-
-        <li class="timeline-inverted">
-
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <h4 class="timeline-title">Simple Application using Android Studio</h4>
-                </div>
-                <div class="timeline-body">
-                    <iframe style="width:100%; height:100%" 
-                    src="https://www.youtube.com/embed/-F8LepUlKFQ" allowfullscreen> 
-                    </iframe>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <ul class="timeline">
-
-        <li class="timeline-inverted">
-
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <h4 class="timeline-title">Simple Application using Android Studio</h4>
-                </div>
-                <div class="timeline-body">
-                    <iframe style="width:100%; height:100%" 
-                    src="https://www.youtube.com/embed/-F8LepUlKFQ" allowfullscreen> 
-                    </iframe>
-                </div>
-            </div>
-        </li>
-    </ul>
 </div>
 
