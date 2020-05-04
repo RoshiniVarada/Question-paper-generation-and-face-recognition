@@ -12,17 +12,18 @@ export class StatComponent implements OnInit {
 
     @Output() event: EventEmitter<any> = new EventEmitter();
     
-
+x:string;
     constructor(
         private router: Router
     ) {}
 
     ngOnInit() {}
     viewdetails(subject,pageName){
+       const sub=JSON.stringify(this.subject.payload.doc.data());
         if(this.pageName=="facultylayout"){
-            this.router.navigate(['faculty-layout/layout/new-section']);
+            this.router.navigate(['faculty-layout/layout/new-section', {subject:sub}]);
         }else{
-            this.router.navigate(['layout/layout/new-section']);
+            this.router.navigate(['layout/layout/new-section', {subject:sub}]);
         }
        
     }
