@@ -137,10 +137,16 @@ export class FirebaseService {
       URL: value.URL,
       Title: value.Title
     })
-
   
 }
+createNotifications(value){
 
+  return this.db.collection('notifications').add({
+    description: value.description
+  })
+
+
+}
  
 
   updateSection(userKey,value){

@@ -19,6 +19,7 @@ export class TimelineComponent implements OnInit {
      { type: 'required', message: 'Title is required.' }
    ]
   };
+  userData: any;
   constructor(public firebaseService:FirebaseService,  private fb: FormBuilder,private router:Router,private sanitizer:DomSanitizer ) {}
 
   ngOnInit() {
@@ -48,6 +49,7 @@ export class TimelineComponent implements OnInit {
   }
 
   onSubmit(value){
+    this.userData = JSON.parse(localStorage.getItem('user'));
     this.firebaseService.createLearnings(value)
     .then(
       res => {
@@ -55,6 +57,8 @@ export class TimelineComponent implements OnInit {
         this.router.navigate(['/faculty-layout']);
       }
     )
+    value.description= value.Title+" " +"new learning module is created";
+    this.firebaseService.createNotifications(value);
   }
-
+ 
 }
