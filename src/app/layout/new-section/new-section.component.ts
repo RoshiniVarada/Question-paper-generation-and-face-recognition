@@ -18,14 +18,17 @@ assignments=false;
 showcomp=false;
   valuesnew: any;
   modulesSub: any;
+  user: any;
+  assgnSub: any;
   constructor(
     public firebaseService: FirebaseService,
-    public _Activatedroute:ActivatedRoute
+    public _Activatedroute:ActivatedRoute,
+    public router:Router
   ) { }
 
   ngOnInit() {
-    this.values = this._Activatedroute.params.subscribe(params => {
-      this.valuesnew =JSON.parse(params.subject);
+    this.values = localStorage.getItem("subdetails");
+      this.valuesnew =JSON.parse(this.values);
       this.firebaseService.getModules(this.valuesnew.name)
       .subscribe(result => {
         this.modulesSub = result;
@@ -34,9 +37,15 @@ showcomp=false;
    
      
 
-      });
+      
   }
 
+ taketest(assgn){
+  const assgnmwnt=JSON.stringify(assgn.payload.doc.data());
+  localStorage.setItem("assgn",assgnmwnt);
+  this.router.navigate(['layout/layout/student-dashboard']);
+    
+ }
   public showfn(value){
     if(value=="modules"){
       this.modules=true;
@@ -49,10 +58,20 @@ showcomp=false;
       this.modules=true;
       this.modules=false;
     }
-    this.firebaseService.getModules(this.valuesnew.name)
-    .subscribe(result => {
-      this.modulesSub = result;
-    })
+    if(this.modules==true){
+      this.firebaseService.getModules(this.valuesnew.name)
+      .subscribe(result => {
+        this.modulesSub = result;
+      })
+    }else{
+     this.user=JSON.parse(localStorage.getItem("UserDetails"));
+     this.valuesnew.sec=this.user.Section;
+      this.firebaseService.getAssignments(this.valuesnew)
+      .subscribe(result => {
+        this.assgnSub = result;
+      })
+    }
+
   }
 
 

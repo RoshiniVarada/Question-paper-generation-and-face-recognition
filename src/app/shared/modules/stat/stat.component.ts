@@ -20,10 +20,11 @@ x:string;
     ngOnInit() {}
     viewdetails(subject,pageName){
        const sub=JSON.stringify(this.subject.payload.doc.data());
+       localStorage.setItem("subdetails",sub);
         if(this.pageName=="facultylayout"){
-            this.router.navigate(['faculty-layout/layout/new-section', {subject:sub}]);
+            this.router.navigate(['faculty-layout/layout/new-section']);
         }else{
-            this.router.navigate(['layout/layout/new-section', {subject:sub}]);
+            this.router.navigate(['layout/layout/new-section']);
         }
        
     }
