@@ -20,6 +20,8 @@ showcomp=false;
   modulesSub: any;
   user: any;
   assgnSub: any;
+  grades: boolean;
+  learnings: boolean;
   constructor(
     public firebaseService: FirebaseService,
     public _Activatedroute:ActivatedRoute,
@@ -46,33 +48,52 @@ showcomp=false;
   this.router.navigate(['layout/layout/student-dashboard']);
     
  }
-  public showfn(value){
-    if(value=="modules"){
-      this.modules=true;
-      this.assignments=false;
-     
-    }else if(value=="assignments"){
-      this.assignments=true;
-      this.modules=false;
-    }else{
-      this.modules=true;
-      this.modules=false;
-    }
-    if(this.modules==true){
-      this.firebaseService.getModules(this.valuesnew.name)
-      .subscribe(result => {
-        this.modulesSub = result;
-      })
-    }else{
-     this.user=JSON.parse(localStorage.getItem("UserDetails"));
-     this.valuesnew.sec=this.user.Section;
-      this.firebaseService.getAssignments(this.valuesnew)
-      .subscribe(result => {
-        this.assgnSub = result;
-      })
-    }
-
+ public showfn(value){
+  if(value=="modules"){
+    this.modules=true;
+    this.assignments=false;
+    this.grades=false;
+    this.learnings=false;
+  }else if(value=="assignments"){
+    this.assignments=true;
+    this.modules=false;
+    this.grades=false;
+    this.learnings=false;
+  }else if(value=="learnings"){
+    this.assignments=false;
+    this.modules=false;
+    this.grades=false;
+    this.learnings=true;
+  }else if(value=="grades"){
+    this.assignments=true;
+    this.modules=false;
+    this.grades=true;
+    this.learnings=false;
+  }else{
+    this.modules=true;
+    this.modules=false;
+    this.grades=false;
+    this.learnings=false;
   }
+  if(this.modules==true){
+    this.firebaseService.getModules(this.valuesnew.name)
+    .subscribe(result => {
+      this.modulesSub = result;
+    })
+  }else if(this.learnings==true){
+    this.router.navigate(['/faculty-layout']);
+   }else if(this.grades==true){
+    this.router.navigate(['/faculty-layout/layout/charts']);
+   }else if(this.assignments==true){
+    this.user=JSON.parse(localStorage.getItem("UserDetails"));
+    this.valuesnew.sec=this.user.Section;
+     this.firebaseService.getAssignments(this.valuesnew)
+     .subscribe(result => {
+       this.assgnSub = result;
+     })
+   }
+
+}
 
 
 

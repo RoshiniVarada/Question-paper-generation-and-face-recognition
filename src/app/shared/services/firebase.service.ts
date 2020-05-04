@@ -150,6 +150,7 @@ export class FirebaseService {
 createNotifications(value){
 
   return this.db.collection('notifications').add({
+    title:value.title,
     description: value.description
   })
 
