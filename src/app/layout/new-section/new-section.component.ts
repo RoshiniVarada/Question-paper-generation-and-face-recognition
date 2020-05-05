@@ -2,8 +2,6 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FirebaseService } from '../../shared/services/firebase.service';
-import { AuthService } from 'src/app/shared/services/auth.service';
-import { IfStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-section-user',

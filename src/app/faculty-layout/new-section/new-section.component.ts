@@ -22,13 +22,27 @@ showcomp=false;
   assgnSub: any;
   grades: boolean;
   learnings: boolean;
+  exampleForm: FormGroup;
+  validation_messages = {
+    'No': [
+      { type: 'required', message: 'No is required.' }
+    ],
+    'Subject': [
+     { type: 'required', message: 'Subject is required.' }
+   ],
+   'Max_marks': [
+    { type: 'required', message: 'Max_marks is required.' }
+  ]
+  };
   constructor(
     public firebaseService: FirebaseService,
     public _Activatedroute:ActivatedRoute,
-    public router:Router
+    public router:Router,
+    private fb: FormBuilder
   ) { }
 
   ngOnInit() {
+    this.createForm();
     this.values = localStorage.getItem("subdetails");
       this.valuesnew =JSON.parse(this.values);
       this.firebaseService.getModules(this.valuesnew.name)
@@ -40,6 +54,13 @@ showcomp=false;
      
 
       
+  }
+  createForm() {
+    this.exampleForm = this.fb.group({
+      No: ['', Validators.required ],
+      Subject: ['', Validators.required ],
+      Max_marks:['',Validators.required]
+    });
   }
 
  taketest(assgn){
@@ -95,6 +116,10 @@ showcomp=false;
 
 }
 
+onSubmit(value){
+
+ this.firebaseService.createAssignments(value);
+}
 
 
 
