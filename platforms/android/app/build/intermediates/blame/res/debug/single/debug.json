@@ -40,12 +40,12 @@
         "source": "D:\\Git Hub\\Question-paper-generation-and-face-recognition\\platforms\\android\\app\\src\\main\\res\\mipmap-xhdpi\\icon.png"
     },
     {
-        "merged": "D:\\Cordova-Integration\\5-app-integration\\Question paper generation and face recognition\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_icon.png.flat",
-        "source": "D:\\Cordova-Integration\\5-app-integration\\Question paper generation and face recognition\\platforms\\android\\app\\src\\main\\res\\mipmap-mdpi\\icon.png"
-    },
-    {
         "merged": "D:\\Cordova-Integration\\4-Components and firebase\\Question paper generation and face recognition\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_config.xml.flat",
         "source": "D:\\Cordova-Integration\\4-Components and firebase\\Question paper generation and face recognition\\platforms\\android\\app\\src\\main\\res\\xml\\config.xml"
+    },
+    {
+        "merged": "D:\\Cordova-Integration\\5-app-integration\\Question paper generation and face recognition\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_icon.png.flat",
+        "source": "D:\\Cordova-Integration\\5-app-integration\\Question paper generation and face recognition\\platforms\\android\\app\\src\\main\\res\\mipmap-mdpi\\icon.png"
     },
     {
         "merged": "D:\\Git Hub\\Question-paper-generation-and-face-recognition\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-hdpi_screen.png.flat",
