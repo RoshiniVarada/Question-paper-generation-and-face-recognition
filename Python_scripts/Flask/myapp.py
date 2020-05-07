@@ -25,8 +25,8 @@ def hello():
     return json.dumps(str(result), indent=4)
 
 
-@app.route("/add/<name>", methods=['GET'])
-def retrieve_by_name_db(name):
+@app.route("/add/<name>/<limit>", methods=['GET'])
+def retrieve_by_name_db(name,limit):
     db_connection = Connect()
     answer_dict = {
         "id": randrange(10),
@@ -35,7 +35,7 @@ def retrieve_by_name_db(name):
         "questions": []
     }
     count = 0
-    for i in db_connection.interview.aggregate([{'$match': {'Subject':name}},{'$sample': {'size': 10}}]):
+    for i in db_connection.interview.aggregate([{'$match': {'Subject':name}},{'$sample': {'size': int(limit)}}]):
             try:
                 answer_dict['questions'].append({
                     "id": count,
