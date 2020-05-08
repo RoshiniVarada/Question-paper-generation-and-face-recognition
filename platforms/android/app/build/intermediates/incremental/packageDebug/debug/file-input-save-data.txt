@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue May 05 11:38:28 CDT 2020
+#Tue May 05 17:24:46 CDT 2020
 60.set=ASSET
 52.set=ASSET
 53.base=D\:\\Git Hub\\Question-paper-generation-and-face-recognition\\platforms\\android\\app\\build\\intermediates\\assets\\debug
@@ -84,7 +84,7 @@
 69.path=www/23.479618b5fa2e22ec79f0.js
 79.set=ASSET
 60.baseType=DIRECTORY
-22.path=www/cordova_plugins.js
+22.path=www/styles.5c431e734dfdcf9968eb.css
 29.path=www/cordova-js-src/android/nativeapiprovider.js
 2.baseType=DIRECTORY
 76.path=www/assets/images/header.jpg
@@ -130,7 +130,7 @@
 68.path=classes.dex
 69.set=ASSET
 4.baseType=DIRECTORY
-21.path=www/assets/images/slider1.jpg
+21.path=www/cordova_plugins.js
 28.path=www/assets/images/faces/joe-gardner-2.jpg
 75.path=www/assets/i18n/it.json
 4.set=ASSET
@@ -174,7 +174,7 @@
 67.path=www/assets/i18n/es.json
 6.baseType=DIRECTORY
 59.set=ASSET
-20.path=www/polyfills.e5db614b76cf1b98f77e.js
+20.path=www/assets/images/slider1.jpg
 57.baseType=DIRECTORY
 17.baseType=DIRECTORY
 27.path=www/assets/dummy-user.png
@@ -214,7 +214,7 @@ count=80
 73.set=ASSET
 8.baseType=DIRECTORY
 65.set=ASSET
-19.path=www/124.8c5d9846c50e1433efee.jpg
+19.path=www/polyfills.e5db614b76cf1b98f77e.js
 32.base=D\:\\Git Hub\\Question-paper-generation-and-face-recognition\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 57.set=ASSET
 66.path=www/10.7d52ee26c03d77d8bdc9.js
@@ -252,14 +252,14 @@ count=80
 68.baseType=DIRECTORY
 28.baseType=DIRECTORY
 24.base=D\:\\Git Hub\\Question-paper-generation-and-face-recognition\\platforms\\android\\app\\build\\intermediates\\assets\\debug
-16.path=www/21.b6136d0c07271fcfd3bf.js
+16.path=www/16.6e0ae10f285e2ffe8149.js
 71.base=D\:\\Git Hub\\Question-paper-generation-and-face-recognition\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 31.baseType=DIRECTORY
 78.base=D\:\\Git Hub\\Question-paper-generation-and-face-recognition\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 71.set=ASSET
 63.set=ASSET
 55.set=ASSET
-18.path=www/assets/images/faces/kaci-baum-2.jpg
+18.path=www/124.8c5d9846c50e1433efee.jpg
 31.base=D\:\\Git Hub\\Question-paper-generation-and-face-recognition\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 47.set=ASSET
 65.path=www/main.23208487d646f31a8e5b.js
@@ -296,7 +296,7 @@ count=80
 55.path=www/fontawesome-webfont.674f50d287a8c48dc19b.eot
 33.baseType=DIRECTORY
 23.base=D\:\\Git Hub\\Question-paper-generation-and-face-recognition\\platforms\\android\\app\\build\\intermediates\\assets\\debug
-15.path=www/styles.295765cfec4ea4e946e8.css
+15.path=www/21.b6136d0c07271fcfd3bf.js
 70.base=D\:\\Git Hub\\Question-paper-generation-and-face-recognition\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 77.base=D\:\\Git Hub\\Question-paper-generation-and-face-recognition\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 61.set=ASSET
@@ -304,7 +304,7 @@ count=80
 63.baseType=DIRECTORY
 45.set=ASSET
 23.baseType=DIRECTORY
-17.path=www/16.6e0ae10f285e2ffe8149.js
+17.path=www/assets/images/faces/kaci-baum-2.jpg
 30.base=D\:\\Git Hub\\Question-paper-generation-and-face-recognition\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 37.set=ASSET
 64.path=www/17.9a3b1bbf8a4a60acfde6.js
